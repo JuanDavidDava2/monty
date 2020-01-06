@@ -12,6 +12,8 @@ void redirect_function(stack_t **head, unsigned int cont, char *instruction)
 	instruction_t op[] = {
 		{"push", execute_push},
 		{"pall", execute_pall},
+		{"pop", execute_pop},
+		{"pint", execute_pint},
 		{NULL, NULL}
 	};
 

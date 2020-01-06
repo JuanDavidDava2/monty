@@ -67,14 +67,14 @@ void execute_pint(stack_t **stack, unsigned int n)
 {
 	stack_t *aux = *stack;
 
-	if (aux)
-		printf("%d\n", aux->n);
-	else
+	if (!aux)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", n);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", n);
 		frees(*stack);
 		exit(EXIT_FAILURE);
 	}
+	else
+		printf("%d\n", aux->n);
 }
 /**
  * execute_pop - remove the first elemnt of the stack
