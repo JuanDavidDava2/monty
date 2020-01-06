@@ -4,11 +4,11 @@
  * @stack: element in stack
  * @n: integer.
  */
-void swap(stack_t **stack, unsigned int n)
+void execute_swap(stack_t **stack, unsigned int n)
 {
-	stack_t temp;
+	int temp;
 
-	if (*stack || (*stack)->next)
+	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%u: can't swap, stack too short\n", n);
 		exit(EXIT_FAILURE);
@@ -21,5 +21,6 @@ void swap(stack_t **stack, unsigned int n)
  * add - adds the top two elements of the stack.
  * @stack: elements in stack.
  * @n: integer.
- * :
  */
+
+
