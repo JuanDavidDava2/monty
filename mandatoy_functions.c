@@ -101,6 +101,6 @@ void execute_pop(stack_t **stack, unsigned int n)
 
 void execute_nop(stack_t **head, unsigned int cont)
 {
-        (void) head;
-        (void) cont;
+	(void) head;
+	(void) cont;
 }

@@ -10,10 +10,10 @@ void execute_mod(stack_t **head, unsigned int n)
 
 	if (!aux || !aux->next)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", n);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", n);
 		exit(EXIT_FAILURE);
 	}
-        if ((*head)->n == 0)
+	else if ((*head)->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", n);
 		exit(EXIT_FAILURE);
