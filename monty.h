@@ -71,4 +71,5 @@ void execute_pop(stack_t **stack, unsigned int n);
 void execute_pint(stack_t **stack, unsigned int n);
 void execute_nop(stack_t **head, unsigned int cont);
 void execute_swap(stack_t **stack, unsigned int n); 
+void execute_add(stack_t **stack, unsigned int n);
 #endif
