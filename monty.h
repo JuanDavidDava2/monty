@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
+#include <errno.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <string.h>
-#include <ctype.h>
-
 
 
 /**
@@ -43,4 +43,27 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct global - global variables
+ * @num: is a pointer
+ * @buff: is a pointer
+ * @file: is a pointer
+ *
+ * Description: global functions
+ * for stack, queues, LIFO, FIFO Holberton project
+ */
+typedef struct global
+{
+	char *num;
+	char *buff;
+	FILE *file;
+} gl;
+
+extern gl glo;
+
+void converter(char *buff, stack_t **head, unsigned int cont);
+void redirect_function(stack_t **head, unsigned int cont, char *instruction);
+void execute_push(stack_t **head, unsigned int cont);
+void free_stack(stack_t *head);
+void execute_pall(stack_t **head, unsigned int cont);
 #endif
