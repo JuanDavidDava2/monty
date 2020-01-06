@@ -70,6 +70,10 @@ void execute_pall(stack_t **head, unsigned int cont);
 void execute_pop(stack_t **stack, unsigned int n);
 void execute_pint(stack_t **stack, unsigned int n);
 void execute_nop(stack_t **head, unsigned int cont);
-void execute_swap(stack_t **stack, unsigned int n); 
+void execute_swap(stack_t **stack, unsigned int n);
 void execute_add(stack_t **stack, unsigned int n);
+void execute_div(stack_t **head, unsigned int n);
+void execute_mod(stack_t **head, unsigned int n);
+void execute_sub(stack_t **head, unsigned int n);
+void execute_mul(stack_t **head, unsigned int n);
 #endif

@@ -17,6 +17,10 @@ void redirect_function(stack_t **head, unsigned int cont, char *instruction)
                 {"nop", execute_nop},
 		{"swap", execute_swap},
 		{"add", execute_add},
+		{"div", execute_div},
+		{"mod", execute_mod},
+		{"mul", execute_mul},
+		{"sub", execute_sub},
 		{NULL, NULL}
 	};
 
