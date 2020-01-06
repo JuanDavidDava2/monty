@@ -65,14 +65,14 @@ void execute_pall(stack_t **head, unsigned int cont)
  */
 void execute_pint(stack_t **stack, unsigned int n)
 {
-	stack_t *aux = *top;
+	stack_t *aux = *stack; 
 
 	if (aux)
 		printf("%d\n", aux->n);
 	else
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", n)
-			exit(EXIT_FAILURE);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", n);
+		exit(EXIT_FAILURE);
 	}
 }
 /**
@@ -85,13 +85,13 @@ void execute_pop(stack_t *stack, unsigned int n)
 {
 	stack_t *aux;
 
-	if (*stack == NULL)
+	if (stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", n);
 		exit(EXIT_FAILURE);
 	}
-	aux = *stack;
-	aux = new->next;
-	free(*stack);
-	*stack = new;
+	aux = stack;
+	aux = aux->next;
+	free(stack);
+	stack = aux;
 }
