@@ -97,8 +97,11 @@ void execute_pop(stack_t **stack, unsigned int n)
 	free(*stack);
 	*stack = aux;
 }
-
-
+/**
+ * execute_nop - nothing.
+ * @head: The stack
+ * @cont: The current file line number
+ */
 void execute_nop(stack_t **head, unsigned int cont)
 {
 	(void) head;
