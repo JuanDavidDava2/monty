@@ -29,6 +29,6 @@ int main(int argc, char **argv)
 		cont++;
 		converter(glo.buff, &head, cont);
 	}
-	free_stack(head);
+	frees(head);
 	exit(EXIT_SUCCESS);
 }

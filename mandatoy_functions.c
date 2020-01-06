@@ -13,13 +13,13 @@ void execute_push(stack_t **head, unsigned int cont)
 	if (stack == NULL)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
-		free_stack(stack);
+		frees(stack);
 		exit(EXIT_FAILURE);
 	}
 	if (!glo.num && glo.num != 0)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", cont);
-		free_stack((*head));
+		frees((*head));
 		free(stack);
 		exit(EXIT_FAILURE);
 	}
@@ -35,7 +35,7 @@ void execute_push(stack_t **head, unsigned int cont)
 	else
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", cont);
-		free_stack((*head));
+		frees((*head));
 		free(stack);
 		exit(EXIT_FAILURE); }
 }
