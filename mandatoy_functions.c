@@ -97,3 +97,10 @@ void execute_pop(stack_t **stack, unsigned int n)
 	free(*stack);
 	*stack = aux;
 }
+
+
+void execute_nop(stack_t **head, unsigned int cont)
+{
+        (void) head;
+        (void) cont;
+}
