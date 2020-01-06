@@ -12,13 +12,13 @@ void execute_push(stack_t **head, unsigned int cont)
 	stack = malloc(sizeof(stack_t));
 	if (stack == NULL)
 	{
-                fprintf(stderr, "USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		free_stack(stack);
-		exit(EXIT_FAILURE); 
-        }
+		exit(EXIT_FAILURE);
+	}
 	if (!glo.num && glo.num != 0)
 	{
-                fprintf(stderr, "L%u: usage: push integer\n", cont);
+		fprintf(stderr, "L%u: usage: push integer\n", cont);
 		free_stack((*head));
 		free(stack);
 		exit(EXIT_FAILURE);
@@ -34,7 +34,7 @@ void execute_push(stack_t **head, unsigned int cont)
 	}
 	else
 	{
-                fprintf(stderr, "L%u: usage: push integer\n", cont);
+		fprintf(stderr, "L%u: usage: push integer\n", cont);
 		free_stack((*head));
 		free(stack);
 		exit(EXIT_FAILURE); }
@@ -58,14 +58,14 @@ void execute_pall(stack_t **head, unsigned int cont)
 }
 
 /**
- * pint - print.
+ * execute_pint - print.
  * @stack: element at the top of the stack (head)
  * @n: int value in the structure
  * Return: void
  */
 void execute_pint(stack_t **stack, unsigned int n)
 {
-	stack_t *aux = *stack; 
+	stack_t *aux = *stack;
 
 	if (aux)
 		printf("%d\n", aux->n);
@@ -76,7 +76,7 @@ void execute_pint(stack_t **stack, unsigned int n)
 	}
 }
 /**
- * pop - remove the first elemnt of the stack
+ * execute_pop - remove the first elemnt of the stack
  * @stack: The stack
  * @n: The current file line number
  * Return: Nothing or EXIT_FAILURE

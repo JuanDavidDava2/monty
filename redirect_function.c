@@ -7,7 +7,7 @@
  */
 void redirect_function(stack_t **head, unsigned int cont, char *instruction)
 {
-        int i = 0;
+	int i = 0;
 
 	instruction_t op[] = {
 		{"push", execute_push},
@@ -25,8 +25,7 @@ void redirect_function(stack_t **head, unsigned int cont, char *instruction)
 		i++;
 	}
 	if (op[i].f == NULL)
-	{
-                fprintf(stderr, "L%d: unknown instruction %s\n", cont, instruction);
+	{fprintf(stderr, "L%d: unknown instruction %s\n", cont, instruction);
 		exit(EXIT_FAILURE);
 	}
 }

@@ -16,4 +16,5 @@ void free_stack(stack_t *head)
 	}
 	fclose(glo.file);
 	free(glo.buff);
+
 }

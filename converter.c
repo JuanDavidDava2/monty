@@ -2,7 +2,7 @@
 /**
  * converter - read the monty files
  * @buff: is a pointer
- * @h: is a double pointer 
+ * @head: is a double pointer
  * @cont: is a int
  * Return: Void.
  */
