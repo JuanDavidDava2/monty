@@ -1,3 +1,4 @@
+
 #ifndef MONTY
 #define MONTY
 
@@ -66,8 +67,6 @@ void redirect_function(stack_t **head, unsigned int cont, char *instruction);
 void execute_push(stack_t **head, unsigned int cont);
 void frees(stack_t *head);
 void execute_pall(stack_t **head, unsigned int cont);
-void execute_pop(stack_t *stack, unsigned int n);
-
-
+void execute_pop(stack_t **stack, unsigned int n);
 void execute_pint(stack_t **stack, unsigned int n);
 #endif
