@@ -14,6 +14,7 @@ void redirect_function(stack_t **head, unsigned int cont, char *instruction)
 		{"pall", execute_pall},
 		{"pop", execute_pop},
 		{"pint", execute_pint},
+                {"nop", execute_nop},
 		{NULL, NULL}
 	};
 

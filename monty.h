@@ -69,4 +69,5 @@ void frees(stack_t *head);
 void execute_pall(stack_t **head, unsigned int cont);
 void execute_pop(stack_t **stack, unsigned int n);
 void execute_pint(stack_t **stack, unsigned int n);
+void execute_nop(stack_t **head, unsigned int cont);
 #endif
