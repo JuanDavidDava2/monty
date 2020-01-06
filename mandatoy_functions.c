@@ -72,6 +72,7 @@ void execute_pint(stack_t **stack, unsigned int n)
 	else
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", n);
+		frees(*stack);
 		exit(EXIT_FAILURE);
 	}
 }
@@ -81,17 +82,18 @@ void execute_pint(stack_t **stack, unsigned int n)
  * @n: The current file line number
  * Return: Nothing or EXIT_FAILURE
  */
-void execute_pop(stack_t *stack, unsigned int n)
+void execute_pop(stack_t **stack, unsigned int n)
 {
 	stack_t *aux;
 
-	if (stack == NULL)
+	if (!*stack)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", n);
+		frees(*stack);
 		exit(EXIT_FAILURE);
 	}
-	aux = stack;
+	aux = *stack;
 	aux = aux->next;
-	free(stack);
-	stack = aux;
+	free(*stack);
+	*stack = aux;
 }
